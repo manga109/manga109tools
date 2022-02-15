@@ -1,5 +1,5 @@
-# manga109tools-dev
-manga109tools is a helper for datasets with the format of Manga109 annotation. This tool provides commands for the validation of the format of annotations for now.
+# manga109tools
+manga109tools is a helper toolkit for datasets with the format of Manga109 annotation. This tool provides commands for the validation of the format of annotations for now.
 
 ## Validation
 Validate the XML files of annotations
