@@ -1,0 +1,5 @@
+cchardet
+manga109api
+numpy
+pytest
+pyyaml

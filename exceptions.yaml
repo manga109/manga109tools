@@ -1,0 +1,19 @@
+# list of two ids
+# the bounding box of the element of the first id contains that of the second id
+test_duplicate_bbox: []
+
+# list of two ids
+# the face of the first id contains the face of the second id
+test_face_not_in_face:
+# ByebyeC-BOY id="0000eeca" contains "0000eedb"
+- 
+  - 0000eeca
+  - 0000eedb
+# ByebyeC-BOY id="0000ff7d" contains "0000ff77"
+- 
+  - 0000ff7d
+  - 0000ff77
+# DualJustice id="00012d20" contains "00012d27"
+-
+  - 00012d20
+  - 00012d27
