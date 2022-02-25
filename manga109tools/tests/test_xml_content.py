@@ -75,6 +75,20 @@ class TestAnnotation(ContentTestBase):
 
         assert len(ids) == len(set(ids))
 
+    def test_chara_id(self, annotations: list) -> None:
+        """The character id of faces and bodies should be pre-defined in characters.
+
+        Args:
+            annotations (list): list of annotation per book obtained by a manga109 parser
+        """
+        for annotation in annotations:
+            chara_ids: set = {character["@id"] for character in annotation["character"]}
+
+            for page in annotation["page"]:
+                for annotation_tag in {"face", "body"}:
+                    for element in page[annotation_tag]:
+                        assert element["@character"] in chara_ids
+
     def test_id_type(self, annotations: list) -> None:
         """Ids are hexadecimal with eight digits.
 
