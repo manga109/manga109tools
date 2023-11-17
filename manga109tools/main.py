@@ -1,6 +1,7 @@
 import argparse
 from pathlib import Path
 import pytest
+import sys
 
 
 def parse_args() -> argparse.Namespace:
@@ -35,7 +36,8 @@ def main():
             args.exception_path.as_posix(),
         ]
 
-        pytest.main(pytest_args)
+        exit_code = pytest.main(pytest_args)
+        sys.exit(exit_code)
     else:
         raise NotImplementedError
 
